@@ -1,5 +1,6 @@
 import React from 'react';
-import { CardImage, CardWrapper, Price, PriceNumber, SneakersName } from './styles/StyleCard';
+import Like from './Like';
+import { ButtonLike, CardImage, CardWrapper, Price, PriceNumber, SneakersName } from './styles/StyleCard';
 
 const Card = ({ cards }) => {
     console.log();
@@ -10,6 +11,9 @@ const Card = ({ cards }) => {
                     <CardWrapper
                         key={index}
                     >
+                        <ButtonLike>
+                            <Like />
+                        </ButtonLike>
                         <CardImage src={card.src} alt={card.alt} />
                         <SneakersName>{card.name}</SneakersName>
                         <Price>{card.price}</Price>

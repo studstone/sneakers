@@ -11,6 +11,7 @@ export const ProductTitle = styled.h1`
 
 export const CardContainer = styled.div`
     margin-top: 4rem;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px 40px;
 `;
