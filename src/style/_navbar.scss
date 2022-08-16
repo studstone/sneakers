@@ -1,0 +1,37 @@
+.cart {
+  margin-right: 1rem;
+  cursor: pointer;
+
+  path {
+    transition: stroke 0.4s ease-in-out;
+  }
+
+  &:hover path {
+    stroke: red;
+  }
+}
+
+.heart {
+  margin-right: 3rem;
+  cursor: pointer;
+
+  path {
+    transition: fill 0.4s ease-in-out;
+  }
+
+  &:hover path {
+    fill: red;
+  }
+}
+
+.user {
+  cursor: pointer;
+
+  path {
+    transition: fill 0.4s ease-in-out;
+  }
+
+  &:hover path {
+    fill: red;
+  }
+}

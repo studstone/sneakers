@@ -1,11 +1,14 @@
 import React from "react";
 import NavBar from "./Components/NavBar/NavBar";
-import GlobalStyle from "./Components/Styled/GlobalStyle";
+import GlobalStyle, { Wrapper } from "./Components/Styled/GlobalStyle";
+import './style/index.scss';
 
 const App = () => (
     <>
         <GlobalStyle />
-        <NavBar />
+        <Wrapper>
+            <NavBar />
+        </Wrapper>
     </>
 );
 

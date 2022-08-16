@@ -1,4 +1,4 @@
-export const varianle = {
+export const variable = {
     bodyBgColor: '#E7F6FF',
     wrapperBgColor: '#FFFFFF',
     sliderBgColor: '#F4EFE9',

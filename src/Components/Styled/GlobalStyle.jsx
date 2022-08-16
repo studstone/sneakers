@@ -1,4 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { variable } from "./Variable";
+
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -13,7 +15,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
     margin: 0;
+    padding-top: 8.5rem;
+    background-color: ${variable.bodyBgColor};
   }
 
   img {
@@ -37,6 +44,7 @@ const GlobalStyle = createGlobalStyle`
   h3 {
     padding: 0;
     margin: 0;
+    font-weight: 700;
   }
 
   p {
@@ -60,3 +68,11 @@ input::-webkit-inner-spin-button {
 `;
 
 export default GlobalStyle;
+
+export const Wrapper = styled.div`
+  max-width: 108rem;
+  background-color: ${variable.wrapperBgColor};
+  margin: 0 auto;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 2rem 2rem 0 0;
+`;
