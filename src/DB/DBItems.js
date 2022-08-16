@@ -1,4 +1,4 @@
-export const card = [
+export const cards = [
     {
         src: './images/sneakers/sneakers-1.png',
         alt: 'Image: Sneakers',

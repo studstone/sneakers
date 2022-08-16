@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding-top: 8.5rem;
     background-color: ${variable.bodyBgColor};
+    color: ${variable.primaryTextColor}
   }
 
   img {

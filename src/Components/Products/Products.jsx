@@ -1,9 +1,16 @@
 import React from 'react';
+import Card from './Card';
+import { CardContainer, ProductTitle, ProductWrapper } from './styles/StyleProduct';
 
-const Products = () => {
+const Products = ({ cards }) => {
     console.log();
     return (
-        <div>Products</div>
+        <ProductWrapper>
+            <ProductTitle>Все кроссовки</ProductTitle>
+            <CardContainer>
+                <Card cards={cards} />
+            </CardContainer>
+        </ProductWrapper>
     );
 };
 
