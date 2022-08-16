@@ -1,7 +1,7 @@
 import React from 'react';
 import Cart from './Cart';
 import Heart from './Heart';
-import { DescriptionTitle, Header, HeaderTitle, Logo, TitleWrapper, TotalPrice } from './StyleNavbar';
+import { DescriptionTitle, Header, HeaderTitle, Logo, TitleWrapper, TotalPrice } from './styles/StyleNavbar';
 import User from './User';
 
 const NavBar = () => (
