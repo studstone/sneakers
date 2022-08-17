@@ -1,6 +1,6 @@
 import React from 'react';
 import Like from './Like';
-import { ButtonLike, CardImage, CardWrapper, Price, PriceNumber, SneakersName } from './styles/StyleCard';
+import { ButtonAdd, ButtonLike, CardImage, CardWrapper, Price, PriceNumber, SneakersName } from './styles/StyleCard';
 
 const Card = ({ liked, likedCard }) => {
     console.log();
@@ -19,10 +19,11 @@ const Card = ({ liked, likedCard }) => {
                         >
                             <Like />
                         </ButtonLike>
+                        <ButtonAdd />
                         <CardImage src={card.src} alt={card.alt} />
                         <SneakersName>{card.name}</SneakersName>
                         <Price>{card.price}</Price>
-                        <PriceNumber>{card.priceNumber}</PriceNumber>
+                        <PriceNumber>{card.priceNumber} руб.</PriceNumber>
                     </CardWrapper>
                 )
             }
