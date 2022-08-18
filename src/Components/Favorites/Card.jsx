@@ -3,7 +3,7 @@ import Like from './Like';
 import { ButtonAdd, ButtonLike, CardImage, CardWrapper, Price, PriceNumber, SneakersName } from './styles/StyleCard';
 
 const Card = ({ likedCard, favorites }) => {
-    console.log(favorites);
+    console.log();
 
 
     return (

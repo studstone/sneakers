@@ -6,9 +6,10 @@ import {
     ProductTitle, ProductWrapper
 } from './styles/StyleFavorites';
 
-const Favorites = ({ cards }) => {
+const Favorites = ({ likedCard, cardsFavorites }) => {
 
-    const favorites = cards.liked.filter(card => card.liked);
+    const favorites = cardsFavorites.filter(card => card.liked);
+    console.log(favorites);
 
     return (
         <>
@@ -20,7 +21,7 @@ const Favorites = ({ cards }) => {
                             <ProductTitle>Мои закладки</ProductTitle>
                         </FavoritesTop>
                         <CardContainer>
-                            <Card {...cards} favorites={favorites} />
+                            <Card favorites={favorites} likedCard={likedCard} />
                         </CardContainer>
                     </ProductWrapper> :
                     <EmojiContainer>
