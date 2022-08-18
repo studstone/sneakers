@@ -2,14 +2,14 @@ import React from 'react';
 import Like from './Like';
 import { ButtonAdd, ButtonLike, CardImage, CardWrapper, Price, PriceNumber, SneakersName } from './styles/StyleCard';
 
-const Card = ({ likedCard, newCardsFavorites, delElArr }) => {
+const Card = ({ likedCard, cardsFavorites, delElArr }) => {
     console.log();
 
 
     return (
         <>
             {
-                newCardsFavorites.map((card, i) =>
+                cardsFavorites.map((card, i) =>
                     <CardWrapper
                         key={card.id}
                     >

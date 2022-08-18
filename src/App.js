@@ -17,8 +17,14 @@ const App = () => {
             <GlobalStyle />
             <Wrapper>
                 <NavBar />
-                <Products cards={liked} favorites={favorites} />
-                <Favorites {...liked} {...favorites} />
+                <Products
+                    cards={liked}
+                    favorites={favorites}
+                />
+                <Favorites
+                    {...liked}
+                    {...favorites}
+                />
             </Wrapper>
         </>
     );

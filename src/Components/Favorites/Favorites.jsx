@@ -7,15 +7,12 @@ import {
 } from './styles/StyleFavorites';
 
 const Favorites = ({ likedCard, cardsFavorites, delElArr }) => {
+    console.log();
 
-    const newCardsFavorites = cardsFavorites.filter(card => card.liked);
-    console.log(newCardsFavorites, 'newCardsFavorites');
-    console.log(cardsFavorites, 'cardsFavorites');
-    // console.log(delElArr);
     return (
         <>
             {
-                newCardsFavorites.length ?
+                cardsFavorites.length ?
                     <ProductWrapper>
                         <FavoritesTop>
                             <LinkBack href="#" />
@@ -23,7 +20,7 @@ const Favorites = ({ likedCard, cardsFavorites, delElArr }) => {
                         </FavoritesTop>
                         <CardContainer>
                             <Card
-                                newCardsFavorites={newCardsFavorites}
+                                cardsFavorites={cardsFavorites}
                                 likedCard={likedCard}
                                 delElArr={delElArr}
                             />
@@ -39,9 +36,7 @@ const Favorites = ({ likedCard, cardsFavorites, delElArr }) => {
                         </LinkHome>
                     </EmojiContainer>
             }
-
         </>
-
     );
 };
 

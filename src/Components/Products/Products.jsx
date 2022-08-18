@@ -9,7 +9,10 @@ const Products = ({ cards, favorites }) => {
         <ProductWrapper>
             <ProductTitle>Все кроссовки</ProductTitle>
             <CardContainer>
-                <Card {...cards} {...favorites} />
+                <Card
+                    {...cards}
+                    {...favorites}
+                />
             </CardContainer>
         </ProductWrapper>
     );
