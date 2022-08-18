@@ -3,6 +3,7 @@ export const variable = {
     wrapperBgColor: '#FFFFFF',
     sliderBgColor: '#F4EFE9',
     buttonBgColor: '#A5D364',
+    linkBgColor: '#9DD458',
     btnLikeBgColor: '#FEF0F0',
     heartLikeFill: '#FF8585',
     primaryTextColor: '#000000',

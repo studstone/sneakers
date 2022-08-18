@@ -1,5 +1,5 @@
 import React from "react";
-// import Favorites from "./Components/Favorites/Favorites";
+import Favorites from "./Components/Favorites/Favorites";
 import NavBar from "./Components/NavBar/NavBar";
 import Products from "./Components/Products/Products";
 import GlobalStyle, { Wrapper } from "./Components/Styled/GlobalStyle";
@@ -16,7 +16,7 @@ const App = () => {
             <Wrapper>
                 <NavBar />
                 <Products cards={favorites} />
-                {/* <Favorites cards={favorites} /> */}
+                <Favorites cards={favorites} />
             </Wrapper>
         </>
     );

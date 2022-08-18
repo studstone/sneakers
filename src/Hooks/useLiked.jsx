@@ -15,7 +15,17 @@ const useLiked = () => {
         }));
     };
 
-    return { liked, likedCard };
+    const addCart = index => {
+        setLiked(cards.map((card, i) => {
+            if (i === index) {
+                card.cart = !card.cart;
+            }
+
+            return card;
+        }));
+    };
+
+    return { liked, likedCard, addCart };
 };
 
 export default useLiked;
