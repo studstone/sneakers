@@ -7,7 +7,6 @@ import {
 } from './styles/StyleFavorites';
 
 const Favorites = ({ cards }) => {
-    console.log();
 
     const favorites = cards.liked.filter(card => card.liked);
 
