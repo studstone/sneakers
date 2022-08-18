@@ -6,22 +6,27 @@ import {
     ProductTitle, ProductWrapper
 } from './styles/StyleFavorites';
 
-const Favorites = ({ likedCard, cardsFavorites }) => {
+const Favorites = ({ likedCard, cardsFavorites, delElArr }) => {
 
-    const favorites = cardsFavorites.filter(card => card.liked);
-    console.log(favorites);
-
+    const newCardsFavorites = cardsFavorites.filter(card => card.liked);
+    console.log(newCardsFavorites, 'newCardsFavorites');
+    console.log(cardsFavorites, 'cardsFavorites');
+    // console.log(delElArr);
     return (
         <>
             {
-                favorites.length ?
+                newCardsFavorites.length ?
                     <ProductWrapper>
                         <FavoritesTop>
                             <LinkBack href="#" />
                             <ProductTitle>Мои закладки</ProductTitle>
                         </FavoritesTop>
                         <CardContainer>
-                            <Card favorites={favorites} likedCard={likedCard} />
+                            <Card
+                                newCardsFavorites={newCardsFavorites}
+                                likedCard={likedCard}
+                                delElArr={delElArr}
+                            />
                         </CardContainer>
                     </ProductWrapper> :
                     <EmojiContainer>

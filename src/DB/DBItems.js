@@ -6,7 +6,8 @@ export const cards = [
         name: 'Мужские Кроссовки Nike Blazer Mid Suede',
         price: 'Цена:',
         priceNumber: '12 999',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 1,
@@ -15,7 +16,8 @@ export const cards = [
         name: 'Мужские Кроссовки Nike Air Max 270',
         price: 'Цена:',
         priceNumber: '12 999',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 2,
@@ -24,7 +26,8 @@ export const cards = [
         name: 'Мужские Кроссовки Nike Blazer Mid Suede',
         price: 'Цена:',
         priceNumber: '8 499',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 3,
@@ -33,7 +36,8 @@ export const cards = [
         name: 'Кроссовки Puma X Aka Boku Future Rider',
         price: 'Цена:',
         priceNumber: '8 999',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 4,
@@ -42,7 +46,8 @@ export const cards = [
         name: 'Мужские Кроссовки Under Armour Curry 8',
         price: 'Цена:',
         priceNumber: '15 199',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 5,
@@ -51,7 +56,8 @@ export const cards = [
         name: 'Мужские Кроссовки Nike Kyrie 7',
         price: 'Цена:',
         priceNumber: '11 299',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 6,
@@ -60,7 +66,8 @@ export const cards = [
         name: 'Мужские Кроссовки Jordan Air Jordan 11',
         price: 'Цена:',
         priceNumber: '10 799',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 7,
@@ -69,7 +76,8 @@ export const cards = [
         name: 'Мужские Кроссовки Nike LeBron XVIII',
         price: 'Цена:',
         priceNumber: '16 499',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 8,
@@ -78,7 +86,8 @@ export const cards = [
         name: 'Мужские Кроссовки Nike Lebron XVIII Low',
         price: 'Цена:',
         priceNumber: '13 999',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 9,
@@ -87,7 +96,8 @@ export const cards = [
         name: 'Мужские Кроссовки Nike Blazer Mid Suede',
         price: 'Цена:',
         priceNumber: '8 499',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 10,
@@ -96,7 +106,8 @@ export const cards = [
         name: 'Кроссовки Puma X Aka Boku Future Rider',
         price: 'Цена:',
         priceNumber: '8 999',
-        liked: false
+        liked: false,
+        cart: false
     },
     {
         id: 11,
@@ -105,6 +116,7 @@ export const cards = [
         name: 'Мужские Кроссовки Nike Kyrie Flytrap IV',
         price: 'Цена:',
         priceNumber: '11 299',
-        liked: false
+        liked: false,
+        cart: false
     },
 ];

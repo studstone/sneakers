@@ -2,12 +2,12 @@ import React from 'react';
 import Like from './Like';
 import { ButtonAdd, ButtonLike, CardImage, CardWrapper, Price, PriceNumber, SneakersName } from './styles/StyleCard';
 
-const Card = ({ liked, likedCard, addCart, addToArr }) => {
+const Card = ({ liked, likedCard, addCart, addToArr, delElArr }) => {
     console.log();
     return (
         <>
             {
-                liked.map(card =>
+                liked.map((card, i) =>
                     <CardWrapper
                         key={card.id}
                     >
@@ -15,7 +15,7 @@ const Card = ({ liked, likedCard, addCart, addToArr }) => {
                             liked={card.liked}
                             onClick={() => {
                                 likedCard(card.id);
-                                addToArr(card);
+                                card.liked ? addToArr(card) : delElArr(i);
                             }}
                         >
                             <Like />

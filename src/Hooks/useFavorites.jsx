@@ -7,7 +7,11 @@ const useFavorites = () => {
         setCardsFavorites([...cardsFavorites, el]);
     };
 
-    return { cardsFavorites, addToArr };
+    const delElArr = index => {
+        cardsFavorites.splice(index, 1);
+    };
+
+    return { cardsFavorites, addToArr, delElArr };
 };
 
 export default useFavorites;
