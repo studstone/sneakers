@@ -8,18 +8,22 @@ import { cards } from "./DB/DBItems";
 import useFavorites from "./Hooks/useFavorites";
 import useLiked from "./Hooks/useLiked";
 import useOrders from "./Hooks/useOrders";
+import useVisibilityOrders from "./Hooks/useVisibilityOrders";
 import './style/index.scss';
 
 const App = () => {
     const liked = useLiked(cards);
     const favorites = useFavorites();
     const orders = useOrders();
+    const vivibilityOrders = useVisibilityOrders();
 
     return (
         <>
             <GlobalStyle />
             <Wrapper>
-                <NavBar />
+                <NavBar
+                    {...vivibilityOrders}
+                />
                 <Products
                     cards={liked}
                     favorites={favorites}
@@ -32,6 +36,7 @@ const App = () => {
                 <Orders
                     {...liked}
                     {...orders}
+                    {...vivibilityOrders}
                 />
             </Wrapper>
         </>

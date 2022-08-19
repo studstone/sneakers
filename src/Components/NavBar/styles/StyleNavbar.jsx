@@ -40,5 +40,5 @@ export const TotalPrice = styled.span`
     line-height: 1.7rem;
     color: #5C5C5C;
     margin-right: 3rem;
-    cursor: default;
+    cursor: pointer;
 `;

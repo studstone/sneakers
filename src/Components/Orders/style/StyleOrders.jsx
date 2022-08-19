@@ -1,5 +1,8 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 import { variable } from "../../Styled/Variable";
+
+
 
 export const Blur = styled.div`
     position: fixed;
@@ -117,3 +120,6 @@ export const EmptyWrapper = styled.div`
     align-items: center;
     justify-content: center;
 `;
+
+export const MOrdersWrapper = motion(OrdersWrapper);
+export const MBlur = motion(Blur);
