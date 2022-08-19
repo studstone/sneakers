@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import { CardContainer, ProductTitle, ProductWrapper } from './styles/StyleProduct';
 
-const Products = ({ cards, favorites }) => {
+const Products = ({ cards, favorites, orders }) => {
     console.log();
 
     return (
@@ -12,6 +12,7 @@ const Products = ({ cards, favorites }) => {
                 <Card
                     {...cards}
                     {...favorites}
+                    {...orders}
                 />
             </CardContainer>
         </ProductWrapper>
