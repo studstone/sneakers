@@ -1,5 +1,5 @@
 import React from "react";
-// import Favorites from "./Components/Favorites/Favorites";
+import Favorites from "./Components/Favorites/Favorites";
 import NavBar from "./Components/NavBar/NavBar";
 import Orders from "./Components/Orders/Orders";
 import Products from "./Components/Products/Products";
@@ -29,10 +29,10 @@ const App = () => {
                     favorites={favorites}
                     orders={orders}
                 />
-                {/* <Favorites
+                <Favorites
                     {...liked}
                     {...favorites}
-                /> */}
+                />
                 <Orders
                     {...liked}
                     {...orders}

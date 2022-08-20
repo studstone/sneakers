@@ -1,8 +1,8 @@
 import React from 'react';
 import { ButtonDel, CardImg, CardPrice, CardWrapper, DescriptionCard, NameSneacers } from './style/StyleCard';
 
-const Card = ({ addCart, cardsOrders, delToOrders }) => {
-    console.log(cardsOrders);
+const Card = ({ addCart, cardsOrders, delToOrders, }) => {
+    console.log();
 
     return (
         <>

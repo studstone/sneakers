@@ -8,16 +8,19 @@ import {
     OrdersTitle, Price, PriceName, Purchases, TotalPrice
 } from './style/StyleOrders';
 
-const Orders = ({ addCart, cardsOrders, delToOrders, isVisibileOrders, hendleVisibility }) => {
+const Orders = ({ addCart, cardsOrders, delToOrders,
+    isVisibileOrders, hendleVisibility }) => {
     console.log();
 
     const ordersWrapperAnimation = {
         hidden: {
             right: -385,
+            height: 0,
             opacity: 0
         },
         visible: {
             right: 0,
+            height: '100%',
             opacity: 1
         }
     };
@@ -33,7 +36,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders, isVisibileOrders, hendleVis
 
     return (
         <>
-            <AnimatePresence>
+            {/* <AnimatePresence>
                 {
                     isVisibileOrders &&
                     <MBlur
@@ -44,7 +47,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders, isVisibileOrders, hendleVis
                         onClick={hendleVisibility}
                     />
                 }
-            </AnimatePresence>
+            </AnimatePresence> */}
             <AnimatePresence>
                 {
                     isVisibileOrders && (
@@ -56,7 +59,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders, isVisibileOrders, hendleVis
                         >
                             <OrdersTitle>Корзина</OrdersTitle>
                             {
-                                cardsOrders.lenght ?
+                                cardsOrders.length ?
                                     <>
                                         <Purchases>
                                             <Card

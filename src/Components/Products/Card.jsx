@@ -3,9 +3,20 @@ import Like from './Like';
 import { ButtonAdd, ButtonLike, CardImage, CardWrapper, Price, PriceNumber, SneakersName } from './styles/StyleCard';
 
 const Card = ({ liked, likedCard, addCart, addToArr,
-    delElArr, addToOrders, delToOrders }) => {
+    addToOrders, cardsOrders, cardsFavorites }) => {
 
     console.log();
+
+    const delToOrders = card => {
+        cardsOrders.find((item, index) => (item.id === card.id && cardsOrders.splice(index, 1)));
+    };
+
+    const delToFavorites = card => {
+        cardsFavorites.find((item, index) => (item.id === card.id && cardsFavorites.splice(index, 1)));
+    };
+
+
+
 
     return (
         <>
@@ -18,7 +29,7 @@ const Card = ({ liked, likedCard, addCart, addToArr,
                             liked={card.liked}
                             onClick={() => {
                                 likedCard(card.id);
-                                card.liked ? addToArr(card) : delElArr(i);
+                                card.liked ? addToArr(card) : delToFavorites(card);
                             }}
                         >
                             <Like />
@@ -27,7 +38,7 @@ const Card = ({ liked, likedCard, addCart, addToArr,
                             check={card.cart}
                             onClick={() => {
                                 addCart(card.id);
-                                card.cart ? addToOrders(card) : delToOrders(i);
+                                card.cart ? addToOrders(card) : delToOrders(card);
                             }}
                         />
                         <CardImage src={card.src} alt={card.alt} />
