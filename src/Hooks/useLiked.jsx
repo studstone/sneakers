@@ -6,7 +6,7 @@ const useLiked = () => {
     const [liked, setLiked] = useState(cards);
 
     const likedCard = index => {
-        setLiked(cards.map((card, i) => {
+        setLiked(liked.map((card, i) => {
             if (i === index) {
                 card.liked = !card.liked;
             }
@@ -16,7 +16,7 @@ const useLiked = () => {
     };
 
     const addCart = index => {
-        setLiked(cards.map((card, i) => {
+        setLiked(liked.map((card, i) => {
             if (i === index) {
                 card.cart = !card.cart;
             }

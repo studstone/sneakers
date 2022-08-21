@@ -36,7 +36,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
 
     return (
         <>
-            {/* <AnimatePresence>
+            <AnimatePresence>
                 {
                     isVisibileOrders &&
                     <MBlur
@@ -47,7 +47,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
                         onClick={hendleVisibility}
                     />
                 }
-            </AnimatePresence> */}
+            </AnimatePresence>
             <AnimatePresence>
                 {
                     isVisibileOrders && (
