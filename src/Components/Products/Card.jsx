@@ -5,15 +5,15 @@ import { ButtonAdd, ButtonLike, CardImage, CardWrapper, Price, PriceNumber, Snea
 const Card = ({ liked, likedCard, addCart, addToArr,
     addToOrders, cardsOrders, cardsFavorites }) => {
 
-    console.log();
-
     const delToOrders = card => {
         cardsOrders.find((item, index) => (item.id === card.id && cardsOrders.splice(index, 1)));
     };
 
     const delToFavorites = card => {
         cardsFavorites.find((item, index) => (item.id === card.id && cardsFavorites.splice(index, 1)));
+        localStorage.setItem('cardsFavorites', JSON.stringify(cardsFavorites));
     };
+
 
 
 
@@ -21,7 +21,7 @@ const Card = ({ liked, likedCard, addCart, addToArr,
     return (
         <>
             {
-                liked.map((card, i) =>
+                liked.map(card =>
                     <CardWrapper
                         key={card.id}
                     >

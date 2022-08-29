@@ -4,7 +4,6 @@ import NavBar from "./Components/NavBar/NavBar";
 import Orders from "./Components/Orders/Orders";
 import Products from "./Components/Products/Products";
 import GlobalStyle, { Wrapper } from "./Components/Styled/GlobalStyle";
-import { cards } from "./DB/DBItems";
 import useFavorites from "./Hooks/useFavorites";
 import useLiked from "./Hooks/useLiked";
 import useOrders from "./Hooks/useOrders";
@@ -12,7 +11,7 @@ import useVisibilityOrders from "./Hooks/useVisibilityOrders";
 import './style/index.scss';
 
 const App = () => {
-    const liked = useLiked(cards);
+    const liked = useLiked();
     const favorites = useFavorites();
     const orders = useOrders();
     const vivibilityOrders = useVisibilityOrders();

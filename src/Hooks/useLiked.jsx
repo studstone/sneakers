@@ -2,8 +2,13 @@ import { useState } from 'react';
 import { cards } from '../DB/DBItems';
 
 const useLiked = () => {
+    const cardsLocal = JSON.parse(localStorage.getItem("cards"));
 
-    const [liked, setLiked] = useState(cards);
+
+    const [liked, setLiked] = useState(cardsLocal || cards);
+
+    localStorage.setItem('cards', JSON.stringify(liked));
+
 
     const likedCard = index => {
         setLiked(liked.map((card, i) => {

@@ -1,7 +1,12 @@
 import { useState } from "react";
 
 const useOrders = () => {
-    const [cardsOrders, setCardsOrderss] = useState([]);
+    const cardsOrdersLockal = JSON.parse(localStorage.getItem("cardsOrders"));
+
+
+    const [cardsOrders, setCardsOrderss] = useState(cardsOrdersLockal || []);
+
+    localStorage.setItem('cardsOrders', JSON.stringify(cardsOrders));
 
     const addToOrders = el => {
         setCardsOrderss([...cardsOrders, el]);
