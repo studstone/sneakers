@@ -26,12 +26,6 @@ export const OrdersWrapper = styled.div`
     padding: 3rem;
     background-color: ${variable.wrapperBgColor};
     box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-
-    img {
-        width: 12rem;
-        height: 12rem;
-        margin-bottom: 2.1rem;
-    }
 `;
 
 export const OrdersTitle = styled.h1`
@@ -42,8 +36,8 @@ export const OrdersTitle = styled.h1`
 `;
 
 export const Purchases = styled.div`
-    margin-bottom: 2rem;
     margin-bottom: auto;
+    overflow-x: auto;
 `;
 
 export const TotalPrice = styled.div`

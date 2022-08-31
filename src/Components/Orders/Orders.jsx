@@ -34,6 +34,12 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
         }
     };
 
+    const totalCounter = cardsOrders.reduce((res, order) =>
+        order.priceNumber + res, 0);
+
+    const totalCounterPercent = Math.ceil(cardsOrders.reduce((res, order) =>
+        order.priceNumber * 0.05 + res, 0));
+
     return (
         <>
             <AnimatePresence>
@@ -71,12 +77,12 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
                                         <TotalPrice>
                                             <PriceName>Итого:</PriceName>
                                             <DottedLine />
-                                            <Price>21 498 руб. </Price>
+                                            <Price>{totalCounter} руб.</Price>
                                         </TotalPrice>
                                         <TotalPrice>
                                             <PriceName>Налог 5%:</PriceName>
                                             <DottedLine />
-                                            <Price>1074 руб. </Price>
+                                            <Price>{totalCounterPercent} руб.</Price>
                                         </TotalPrice>
                                         <Butoon>
                                             Оформить заказ

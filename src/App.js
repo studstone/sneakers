@@ -22,6 +22,7 @@ const App = () => {
             <Wrapper>
                 <NavBar
                     {...vivibilityOrders}
+                    {...orders}
                 />
                 <Products
                     cards={liked}

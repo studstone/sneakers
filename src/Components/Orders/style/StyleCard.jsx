@@ -36,12 +36,24 @@ export const CardPrice = styled.span`
 `;
 
 export const ButtonDel = styled.button`
+    position: relative;
+    overflow: hidden;
     width: 3.2rem;
     height: 3.2rem;
     background-color: transparent;
-    background-image: url(${DelImg});
-    background-position: center;
-    background-repeat: no-repeat;
     border: 1px solid #DBDBDB;
     border-radius: 8px;
+
+    ::before {
+        content: '';
+        position: absolute;
+        background-image: url(${DelImg});
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -55%) rotate(45deg);
+    }
 `;
