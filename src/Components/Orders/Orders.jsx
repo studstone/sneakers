@@ -96,6 +96,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
                                             Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.
                                         </Description>
                                         <LinkHome
+                                            to='#'
                                             onClick={hendleVisibility}
                                         >
                                             <Arrow />

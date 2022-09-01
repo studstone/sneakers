@@ -73,7 +73,7 @@ export const ClarificationText = styled.p`
     margin-bottom: 7rem;
 `;
 
-export const LinkHome = styled.button`
+export const LinkHome = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
