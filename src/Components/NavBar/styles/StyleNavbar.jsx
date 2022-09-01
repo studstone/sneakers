@@ -56,7 +56,7 @@ export const ItemTotalPrice = styled.li`
     margin-right: 3rem;
 `;
 
-export const TotalPrice = styled(Link)`
+export const TotalPrice = styled.span`
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.7rem;

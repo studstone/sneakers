@@ -30,7 +30,6 @@ const NavBar = ({ hendleVisibility, cardsOrders }) => {
                 </ItemCart>
                 <ItemTotalPrice>
                     <TotalPrice
-                        to='/'
                         onClick={hendleVisibility}
                     >
                         {totalCounter} руб.
