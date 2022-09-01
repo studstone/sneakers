@@ -3,11 +3,11 @@ import Cart from './Cart';
 import Heart from './Heart';
 import {
     DescriptionTitle, Header, HeaderTitle,
-    ItemCart, ItemHeart, ItemTotalPrice, ItemUser, LinkCustom, LinkLogo, TitleWrapper, TotalPrice
+    ItemCart, ItemHeart, ItemTotalPrice, ItemUser, LinkCustom, LinkLogo, Signal, TitleWrapper, TotalPrice
 } from './styles/StyleNavbar';
 import User from './User';
 
-const NavBar = ({ hendleVisibility, cardsOrders }) => {
+const NavBar = ({ hendleVisibility, cardsOrders, cardsFavorites }) => {
     console.log();
 
     const totalCounter = cardsOrders.reduce((res, order) =>
@@ -27,6 +27,7 @@ const NavBar = ({ hendleVisibility, cardsOrders }) => {
                     <ItemCart>
                         <LinkCustom to='/cart' className='link'>
                             <Cart />
+                            {cardsOrders.length ? <Signal></Signal> : null}
                         </LinkCustom>
                     </ItemCart>
                     <ItemTotalPrice>
@@ -39,6 +40,7 @@ const NavBar = ({ hendleVisibility, cardsOrders }) => {
                     <ItemHeart>
                         <LinkCustom to='/favorites'>
                             <Heart />
+                            {cardsFavorites.length ? <Signal></Signal> : null}
                         </LinkCustom>
                     </ItemHeart>
                     <ItemUser>

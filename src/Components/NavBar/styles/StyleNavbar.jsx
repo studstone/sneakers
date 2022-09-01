@@ -42,19 +42,28 @@ export const DescriptionTitle = styled.p`
 `;
 
 export const ItemCart = styled.li`
+    position: relative;
     width: 2rem;
     height: 2rem;
-    margin-right: 1rem;
+    margin-right: 3rem;
 `;
 export const LinkCustom = styled(Link)`
     display: block;
     width: 100%;
     height: 100%;
+    transition: transform 0.4s ease-in-out;
+    :hover {
+        transform: scale(1.5);
+    }
 `;
 
 export const ItemTotalPrice = styled.li`
     min-width: 8rem;
     margin-right: 3rem;
+    transition: transform 0.4s ease-in-out;
+    :hover {
+        transform: scale(1.5);
+    }
 `;
 
 export const TotalPrice = styled.span`
@@ -71,6 +80,7 @@ export const TotalPrice = styled.span`
 `;
 
 export const ItemHeart = styled.li`
+    position: relative;
     width: 2.2rem;
     height: 1.9rem;
     margin-right: 3rem;
@@ -79,4 +89,14 @@ export const ItemHeart = styled.li`
 export const ItemUser = styled.li`
     width: 2rem;
     height: 2rem;
+`;
+
+export const Signal = styled.span`
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: red;
 `;

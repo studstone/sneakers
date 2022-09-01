@@ -65,7 +65,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
                         >
                             <OrdersTitle>Корзина</OrdersTitle>
                             {
-                                cardsOrders.length > 0 ?
+                                cardsOrders.length ?
                                     <>
                                         <Purchases>
                                             <Card

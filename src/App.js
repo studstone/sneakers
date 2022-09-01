@@ -34,6 +34,7 @@ const App = () => {
                             animationPages={animationPages}
                             vivibilityOrders={vivibilityOrders}
                             orders={orders}
+                            favorites={favorites}
                             liked={liked}
                         />
                     }
