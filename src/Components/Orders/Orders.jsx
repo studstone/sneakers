@@ -1,7 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
-import Arrow from '../Favorites/Arrow';
-import { LinkHome } from '../Favorites/styles/StyleFavorites';
+import Arrow from '../../Pages/Favorites/Arrow';
+import { LinkHome } from '../../Pages/Favorites/styles/StyleFavorites';
 import Card from './CardOrders';
 import {
     Attention, Butoon, Description, DottedLine, EmptyWrapper, MBlur, MOrdersWrapper,

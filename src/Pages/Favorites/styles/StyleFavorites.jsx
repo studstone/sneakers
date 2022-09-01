@@ -1,31 +1,34 @@
 import styled from "styled-components";
-import { variable } from "../../Styled/Variable";
+import { variable } from "../../../Components/Styled/Variable";
 import ArrowLink from '../../../images/arrow-link.svg';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const ProductWrapper = styled.div`
     padding: 4.5rem 6rem 2.4rem 6rem;
+    min-height: 100vh;
 `;
 
 export const FavoritesTop = styled.div`
     display: flex;
     align-items: center;
-`;
 
-export const LinkBack = styled.a`
-    width: 3.5rem;
-    height: 3.5rem;
-    border: 1px solid #F2F2F2;
-    border-radius: 8px;
-    margin-right: 2.1rem;
-    background-image: url(${ArrowLink});
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: margin-right 0.4s ease-in-out, transform 0.4s ease-in-out, border 0.4s ease-in-out;
+    a {
+        width: 3.5rem;
+            height: 3.5rem;
+            border: 1px solid #F2F2F2;
+            border-radius: 8px;
+            margin-right: 2.1rem;
+            background-image: url(${ArrowLink});
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: margin-right 0.4s ease-in-out, transform 0.4s ease-in-out, border 0.4s ease-in-out;
 
-    :hover {
-        margin-right: 5rem;
-        transform: scale(1.2);
-        border: 1px solid #b8b8b8;
+            :hover {
+                margin-right: 5rem;
+                transform: scale(1.2);
+                border: 1px solid #b8b8b8;
+            }
     }
 `;
 
@@ -70,7 +73,7 @@ export const ClarificationText = styled.p`
     margin-bottom: 7rem;
 `;
 
-export const LinkHome = styled.a`
+export const LinkHome = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,3 +91,5 @@ export const LinkHome = styled.a`
         margin-right: 1.5rem;
     }
 `;
+
+export const MEmojiContainer = motion(EmojiContainer);
