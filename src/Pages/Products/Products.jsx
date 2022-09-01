@@ -1,21 +1,29 @@
+import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 import Card from './Card';
-import { CardContainer, ProductTitle, ProductWrapper } from './styles/StyleProduct';
+import { CardContainer, MProductWrapper, ProductTitle } from './styles/StyleProduct';
 
-const Products = ({ cards, favorites, orders }) => {
+const Products = ({ cards, favorites, orders, animationPages }) => {
     console.log();
 
     return (
-        <ProductWrapper>
-            <ProductTitle>Все кроссовки</ProductTitle>
-            <CardContainer>
-                <Card
-                    {...cards}
-                    {...favorites}
-                    {...orders}
-                />
-            </CardContainer>
-        </ProductWrapper>
+        <AnimatePresence>
+            <MProductWrapper
+                initial={animationPages.hidden}
+                animate={animationPages.visible}
+                exit={animationPages.hidden}
+                transition={{ duration: 0.5 }}
+            >
+                <ProductTitle>Все кроссовки</ProductTitle>
+                <CardContainer>
+                    <Card
+                        {...cards}
+                        {...favorites}
+                        {...orders}
+                    />
+                </CardContainer>
+            </MProductWrapper>
+        </AnimatePresence>
     );
 };
 

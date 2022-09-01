@@ -117,3 +117,4 @@ export const EmptyWrapper = styled.div`
 
 export const MOrdersWrapper = motion(OrdersWrapper);
 export const MBlur = motion(Blur);
+export const MEmptyWrapper = motion(EmptyWrapper);

@@ -4,12 +4,12 @@ import Arrow from '../../Pages/Favorites/Arrow';
 import { LinkHome } from '../../Pages/Favorites/styles/StyleFavorites';
 import Card from './CardOrders';
 import {
-    Attention, Butoon, Description, DottedLine, EmptyWrapper, MBlur, MOrdersWrapper,
+    Attention, Butoon, Description, DottedLine, MBlur, MEmptyWrapper, MOrdersWrapper,
     OrdersTitle, Price, PriceName, Purchases, TotalPrice
 } from './style/StyleOrders';
 
 const Orders = ({ addCart, cardsOrders, delToOrders,
-    isVisibileOrders, hendleVisibility }) => {
+    isVisibileOrders, hendleVisibility, animationPages }) => {
     console.log();
 
     const ordersWrapperAnimation = {
@@ -89,7 +89,12 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
                                             <Arrow />
                                         </Butoon>
                                     </> :
-                                    <EmptyWrapper>
+                                    <MEmptyWrapper
+                                        initial={animationPages.hidden}
+                                        animate={animationPages.visible}
+                                        exit={animationPages.hidden}
+                                        transition={{ duration: 0.5 }}
+                                    >
                                         <img src="./images/emoji-2.png" alt="Emogi" />
                                         <Attention>Корзина пустая</Attention>
                                         <Description>
@@ -102,7 +107,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
                                             <Arrow />
                                             Вернуться назад
                                         </LinkHome>
-                                    </EmptyWrapper>
+                                    </MEmptyWrapper>
                             }
                         </MOrdersWrapper>
                     )

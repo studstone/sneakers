@@ -16,12 +16,22 @@ const App = () => {
     const orders = useOrders();
     const vivibilityOrders = useVisibilityOrders();
 
+    const animationPages = {
+        hidden: {
+            opacity: 0
+        },
+        visible: {
+            opacity: 1
+        }
+    };
+
     return (
         <>
             <Routes>
                 <Route path="/"
                     element={
                         <Layout
+                            animationPages={animationPages}
                             vivibilityOrders={vivibilityOrders}
                             orders={orders}
                             liked={liked}
@@ -31,6 +41,7 @@ const App = () => {
                     <Route index
                         element={
                             <Products
+                                animationPages={animationPages}
                                 cards={liked}
                                 favorites={favorites}
                                 orders={orders}
@@ -40,6 +51,7 @@ const App = () => {
                     <Route path="favorites"
                         element={
                             <Favorites
+                                animationPages={animationPages}
                                 {...liked}
                                 {...favorites}
                             />

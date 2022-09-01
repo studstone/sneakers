@@ -4,7 +4,7 @@ import NavBar from '../NavBar/NavBar';
 import Orders from '../Orders/Orders';
 import GlobalStyle, { Wrapper } from '../Styled/GlobalStyle';
 
-const Layout = ({ vivibilityOrders, orders, liked }) => {
+const Layout = ({ vivibilityOrders, orders, liked, animationPages }) => {
     console.log();
     return (
         <>
@@ -16,6 +16,7 @@ const Layout = ({ vivibilityOrders, orders, liked }) => {
                 />
                 <Outlet />
                 <Orders
+                    animationPages={animationPages}
                     {...liked}
                     {...orders}
                     {...vivibilityOrders}

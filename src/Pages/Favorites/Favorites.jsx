@@ -4,27 +4,24 @@ import { Link } from 'react-router-dom';
 import Arrow from './Arrow';
 import Card from './Card';
 import {
-    AttentionSpan, CardContainer, ClarificationText, FavoritesTop, LinkHome, MEmojiContainer,
-    ProductTitle, ProductWrapper
+    AttentionSpan, CardContainer, ClarificationText,
+    FavoritesTop, LinkHome, MEmojiContainer, ProductTitle
 } from './styles/StyleFavorites';
+import { MProductWrapper } from '../Products/styles/StyleProduct';
 
-const Favorites = ({ likedCard, cardsFavorites, delElArr }) => {
+const Favorites = ({ likedCard, cardsFavorites, delElArr, animationPages }) => {
     console.log();
-
-    const animation = {
-        hidden: {
-            opacity: 0
-        },
-        visible: {
-            opacity: 1
-        }
-    };
 
     return (
         <>
             {
                 cardsFavorites.length ?
-                    <ProductWrapper>
+                    <MProductWrapper
+                        initial={animationPages.hidden}
+                        animate={animationPages.visible}
+                        exit={animationPages.hidden}
+                        transition={{ duration: 0.5 }}
+                    >
                         <FavoritesTop>
                             <Link to='/' />
                             <ProductTitle>Мои закладки</ProductTitle>
@@ -36,13 +33,13 @@ const Favorites = ({ likedCard, cardsFavorites, delElArr }) => {
                                 delElArr={delElArr}
                             />
                         </CardContainer>
-                    </ProductWrapper> :
+                    </MProductWrapper> :
                     <AnimatePresence>
                         <MEmojiContainer
-                            initial={animation.hidden}
-                            animate={animation.visible}
-                            exit={animation.hidden}
-                            transition={{ duration: 0.4 }}
+                            initial={animationPages.hidden}
+                            animate={animationPages.visible}
+                            exit={animationPages.hidden}
+                            transition={{ duration: 0.5 }}
                         >
                             <img src="/images/emoji-1.png" alt="Emogi" />
                             <AttentionSpan>Закладок нет :(</AttentionSpan>
