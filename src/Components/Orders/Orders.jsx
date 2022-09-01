@@ -65,7 +65,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
                         >
                             <OrdersTitle>Корзина</OrdersTitle>
                             {
-                                cardsOrders.length ?
+                                cardsOrders.length > 0 ?
                                     <>
                                         <Purchases>
                                             <Card
@@ -95,7 +95,7 @@ const Orders = ({ addCart, cardsOrders, delToOrders,
                                         <Description>
                                             Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.
                                         </Description>
-                                        <LinkHome href="#"
+                                        <LinkHome
                                             onClick={hendleVisibility}
                                         >
                                             <Arrow />

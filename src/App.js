@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Favorites from "./Pages/Favorites/Favorites";
 import Layout from "./Components/Layout/Layout";
 import Products from "./Pages/Products/Products";
-import GlobalStyle, { Wrapper } from "./Components/Styled/GlobalStyle";
+// import GlobalStyle, { Wrapper } from "./Components/Styled/GlobalStyle";
 import useFavorites from "./Hooks/useFavorites";
 import useLiked from "./Hooks/useLiked";
 import useOrders from "./Hooks/useOrders";
@@ -18,38 +18,35 @@ const App = () => {
 
     return (
         <>
-            <GlobalStyle />
-            <Wrapper>
-                <Routes>
-                    <Route path="/"
+            <Routes>
+                <Route path="/"
+                    element={
+                        <Layout
+                            vivibilityOrders={vivibilityOrders}
+                            orders={orders}
+                            liked={liked}
+                        />
+                    }
+                >
+                    <Route index
                         element={
-                            <Layout
-                                vivibilityOrders={vivibilityOrders}
+                            <Products
+                                cards={liked}
+                                favorites={favorites}
                                 orders={orders}
-                                liked={liked}
                             />
                         }
-                    >
-                        <Route index
-                            element={
-                                <Products
-                                    cards={liked}
-                                    favorites={favorites}
-                                    orders={orders}
-                                />
-                            }
-                        />
-                        <Route path="favorites"
-                            element={
-                                <Favorites
-                                    {...liked}
-                                    {...favorites}
-                                />
-                            }
-                        />
-                    </Route>
-                </Routes>
-            </Wrapper>
+                    />
+                    <Route path="favorites"
+                        element={
+                            <Favorites
+                                {...liked}
+                                {...favorites}
+                            />
+                        }
+                    />
+                </Route>
+            </Routes>
         </>
     );
 };

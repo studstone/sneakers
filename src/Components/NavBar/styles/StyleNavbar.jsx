@@ -53,6 +53,7 @@ export const LinkCustom = styled(Link)`
 `;
 
 export const ItemTotalPrice = styled.li`
+    min-width: 8rem;
     margin-right: 3rem;
 `;
 

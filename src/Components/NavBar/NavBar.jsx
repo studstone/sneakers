@@ -22,30 +22,32 @@ const NavBar = ({ hendleVisibility, cardsOrders }) => {
                 <HeaderTitle>REACT SNEAKERS</HeaderTitle>
                 <DescriptionTitle>Магазин лучших кроссовок</DescriptionTitle>
             </TitleWrapper>
-            <ul>
-                <ItemCart>
-                    <LinkCustom to='/cart' className='link'>
-                        <Cart />
-                    </LinkCustom>
-                </ItemCart>
-                <ItemTotalPrice>
-                    <TotalPrice
-                        onClick={hendleVisibility}
-                    >
-                        {totalCounter} руб.
-                    </TotalPrice>
-                </ItemTotalPrice>
-                <ItemHeart>
-                    <LinkCustom to='/favorites'>
-                        <Heart />
-                    </LinkCustom>
-                </ItemHeart>
-                <ItemUser>
-                    <LinkCustom to='/user'>
-                        <User />
-                    </LinkCustom>
-                </ItemUser>
-            </ul>
+            <nav>
+                <ul>
+                    <ItemCart>
+                        <LinkCustom to='/cart' className='link'>
+                            <Cart />
+                        </LinkCustom>
+                    </ItemCart>
+                    <ItemTotalPrice>
+                        <TotalPrice
+                            onClick={hendleVisibility}
+                        >
+                            {totalCounter} руб.
+                        </TotalPrice>
+                    </ItemTotalPrice>
+                    <ItemHeart>
+                        <LinkCustom to='/favorites'>
+                            <Heart />
+                        </LinkCustom>
+                    </ItemHeart>
+                    <ItemUser>
+                        <LinkCustom to='/user'>
+                            <User />
+                        </LinkCustom>
+                    </ItemUser>
+                </ul>
+            </nav>
         </Header>
     );
 };
