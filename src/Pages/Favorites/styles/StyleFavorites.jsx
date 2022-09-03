@@ -12,6 +12,7 @@ export const ProductWrapper = styled.div`
 export const FavoritesTop = styled.div`
     display: flex;
     align-items: center;
+    width: 100%;
 
     a {
         width: 3.5rem;

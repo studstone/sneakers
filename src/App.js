@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import Favorites from "./Pages/Favorites/Favorites";
 import Layout from "./Components/Layout/Layout";
 import Products from "./Pages/Products/Products";
-// import GlobalStyle, { Wrapper } from "./Components/Styled/GlobalStyle";
 import useFavorites from "./Hooks/useFavorites";
 import useLiked from "./Hooks/useLiked";
 import useOrders from "./Hooks/useOrders";
